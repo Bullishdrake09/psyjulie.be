@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "style": "organic",
+  "name": "Organic and tactile",
+  "composition": "Flowing image-text composition and natural silhouettes",
+  "layout": "flowing",
+  "density": "Low",
+  "typography": {
+    "heading": "Georgia, serif",
+    "body": "Arial, sans-serif",
+    "measure": "65ch"
+  },
+  "tokens": {
+    "background": "#f1eddd",
+    "foreground": "#293d30",
+    "surface": "#dce4ce",
+    "accent": "#375b36",
+    "radius": "48px"
+  },
+  "imagery": "Use supplied or rights-cleared assets suited to the subject; preview shapes are placeholders.",
+  "motion": "subtle",
+  "reduced_motion": "Disable decorative motion; keep all content and controls accessible.",
+  "verification": [
+    "composition",
+    "typography",
+    "palette",
+    "geometry",
+    "density",
+    "imagery",
+    "motion",
+    "mobile",
+    "keyboard",
+    "primary flow"
+  ],
+  "avoid": [
+    "Recoloring the same hero/cards template",
+    "Unrequested glass/neon/gradients",
+    "Invented endorsements",
+    "Installing animation libraries by default"
+  ],
+  "family": "legacy"
+}

@@ -1,20 +1,20 @@
 /* ============================================================
    Julie De Kezel — klinisch psycholoog
-   Design direction: organic & warm (cream / terracotta / sage)
+   Design direction: organic & calm (cream / kaki green / sage)
    Type: Fraunces (display serif) + Instrument Sans (body)
    ============================================================ */
 
 :root {
-  --cream:      #f7f2e8;
-  --cream-2:    #efe6d6;
-  --surface:    #fbf8f2;
-  --ink:        #26211c;
-  --ink-soft:   #5f564b;
-  --terracotta: #b4603a;
-  --terracotta-2:#8f4a2b;
-  --clay:       #e7d3c1;
-  --sage:       #6f7f63;
-  --line:       #ded3c2;
+  --cream:      #f6f3ea;
+  --cream-2:    #ece9da;
+  --surface:    #fbfaf3;
+  --ink:        #23281e;
+  --ink-soft:   #4d5643;
+  --kaki:       #7f8d52;
+  --kaki-2:     #55622f;
+  --kaki-soft:  #dfe0c8;
+  --sage:       #47542f;
+  --line:       #d8d8c2;
 
   --measure: 66ch;
   --radius-arch: 999px 999px 28px 28px;
@@ -23,8 +23,8 @@
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
 
-  --shadow-soft: 0 24px 60px -32px rgba(38, 33, 28, .35);
-  --shadow-lift: 0 34px 70px -30px rgba(38, 33, 28, .45);
+  --shadow-soft: 0 24px 60px -32px rgba(35, 40, 30, .35);
+  --shadow-lift: 0 34px 70px -30px rgba(35, 40, 30, .45);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -33,14 +33,15 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
+  overflow-wrap: break-word;
   font-family: var(--font-body);
   font-size: clamp(1rem, .38vw + .93rem, 1.125rem);
   line-height: 1.72;
   color: var(--ink);
   background-color: var(--cream);
   background-image:
-    radial-gradient(1100px 620px at 88% -8%, rgba(180, 96, 58, .13), transparent 62%),
-    radial-gradient(900px 540px at -12% 22%, rgba(111, 127, 99, .12), transparent 60%),
+    radial-gradient(1100px 620px at 88% -8%, rgba(127, 141, 82, .17), transparent 62%),
+    radial-gradient(900px 540px at -12% 22%, rgba(107, 122, 74, .14), transparent 60%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
   background-attachment: fixed, fixed, scroll;
   overflow-x: hidden;
@@ -50,10 +51,10 @@ img { max-width: 100%; height: auto; display: block; }
 
 a { color: inherit; }
 
-::selection { background: var(--clay); color: var(--ink); }
+::selection { background: var(--kaki-soft); color: var(--ink); }
 
 :focus-visible {
-  outline: 2px solid var(--terracotta);
+  outline: 2px solid var(--kaki);
   outline-offset: 4px;
   border-radius: 4px;
 }
@@ -74,8 +75,8 @@ a { color: inherit; }
 .site-header {
   position: sticky; top: 0; z-index: 40;
   backdrop-filter: blur(14px);
-  background: color-mix(in srgb, var(--cream) 82%, transparent);
-  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  background: rgba(246, 243, 234, .88);
+  border-bottom: 1px solid #deddc9;
 }
 .site-header .wrap {
   display: flex; align-items: center; gap: 1.5rem;
@@ -91,7 +92,7 @@ a { color: inherit; }
 }
 .brand .dot {
   width: 9px; height: 9px; border-radius: 50%;
-  background: var(--terracotta); display: inline-block;
+  background: var(--kaki); display: inline-block;
 }
 .nav { margin-left: auto; display: flex; align-items: center; gap: 1.6rem; }
 .nav a {
@@ -104,7 +105,7 @@ a { color: inherit; }
   border-bottom: 1px solid transparent;
   transition: color .25s ease, border-color .25s ease;
 }
-.nav a:hover { color: var(--terracotta); border-color: var(--terracotta); }
+.nav a:hover { color: var(--kaki); border-color: var(--kaki); }
 
 /* ---------------- buttons ---------------- */
 
@@ -116,14 +117,14 @@ a { color: inherit; }
   font-size: .95rem;
   font-weight: 500;
   letter-spacing: .01em;
-  border: 1px solid var(--ink);
-  background: var(--ink);
-  color: var(--cream);
-  transition: transform .3s cubic-bezier(.2,.8,.2,1), background .3s ease, box-shadow .3s ease, color .3s ease;
+  border: 1px solid var(--kaki-2);
+  background: var(--kaki-2);
+  color: #fdf9f2;
+  transition: transform .3s cubic-bezier(.2,.8,.2,1), background .3s ease, box-shadow .3s ease, color .3s ease, border-color .3s ease;
 }
-.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); background: var(--terracotta-2); border-color: var(--terracotta-2); }
-.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
-.btn.ghost:hover { background: var(--clay); border-color: var(--clay); color: var(--ink); }
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); background: var(--ink); border-color: var(--ink); }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn.ghost:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
 .btn .arw { transition: transform .3s ease; }
 .btn:hover .arw { transform: translateX(4px); }
 
@@ -140,12 +141,12 @@ a { color: inherit; }
   font-size: .82rem;
   letter-spacing: .22em;
   text-transform: uppercase;
-  color: var(--terracotta-2);
+  color: var(--kaki-2);
   margin: 0 0 1.1rem;
   display: flex; align-items: center; gap: .7rem;
 }
 .eyebrow::before {
-  content: ""; width: 34px; height: 1px; background: var(--terracotta); display: inline-block;
+  content: ""; width: 34px; height: 1px; background: var(--kaki); display: inline-block;
 }
 .display {
   font-family: var(--font-display);
@@ -156,7 +157,7 @@ a { color: inherit; }
   letter-spacing: -.025em;
   margin: 0 0 1.1rem;
 }
-.display em { font-style: italic; color: var(--terracotta-2); }
+.display em { font-style: italic; color: var(--kaki-2); }
 .subline {
   font-family: var(--font-display);
   font-style: italic;
@@ -226,15 +227,20 @@ section { padding: clamp(3rem, 7vw, 6rem) 0; }
 }
 .interior {
   position: sticky; top: 110px;
-  border-radius: var(--radius-soft);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--line);
+  margin: 0;
 }
-.interior img { width: 100%; object-fit: cover; aspect-ratio: 536/652; }
+.interior img {
+  width: 100%; object-fit: cover; aspect-ratio: 536/652;
+  border-radius: var(--radius-soft);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+/* caption centered under the photo */
 .caption {
   font-size: .84rem; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--ink-soft); margin: .8rem 0 0;
+  color: var(--ink-soft);
+  margin: .95rem 0 0;
+  text-align: center;
 }
 
 /* pull quote */
@@ -243,11 +249,11 @@ section { padding: clamp(3rem, 7vw, 6rem) 0; }
   font-size: clamp(1.5rem, 3vw, 2.35rem);
   line-height: 1.24;
   letter-spacing: -.015em;
-  color: var(--terracotta-2);
-  border-left: 2px solid var(--terracotta);
+  color: var(--kaki-2);
+  border-left: 2px solid var(--kaki);
   padding: .2rem 0 .2rem 1.4rem;
   margin: 2.4rem 0 0;
-  max-width: 30ch;
+  max-width: min(30ch, 100%);
 }
 
 /* note card */
@@ -260,31 +266,24 @@ section { padding: clamp(3rem, 7vw, 6rem) 0; }
   box-shadow: var(--shadow-soft);
 }
 .note p { margin: 0; max-width: 62ch; }
-.note a { color: var(--terracotta-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.note a { color: var(--kaki-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .note a:hover { color: var(--ink); }
 
-/* opleidingen */
+/* opleidingen — no numbering, text only */
 .timeline { list-style: none; margin: 0; padding: 0; }
 .timeline li {
-  display: grid;
-  grid-template-columns: 3.2rem minmax(0, 1fr);
-  gap: 1.2rem;
   padding: 1.15rem 0;
   border-bottom: 1px solid var(--line);
-  align-items: baseline;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  letter-spacing: -.01em;
 }
 .timeline li:last-child { border-bottom: 0; }
-.timeline .num {
-  font-family: var(--font-display);
-  font-size: .95rem;
-  color: var(--terracotta);
-  letter-spacing: .04em;
-}
 
 /* locaties */
 .locations {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(1.2rem, 2.5vw, 2rem);
 }
 .location {
@@ -298,11 +297,11 @@ section { padding: clamp(3rem, 7vw, 6rem) 0; }
 }
 .location::before {
   content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
-  background: var(--terracotta);
+  background: var(--kaki);
   transform: scaleY(.25); transform-origin: top;
   transition: transform .5s cubic-bezier(.2,.8,.2,1);
 }
-.location:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: var(--clay); }
+.location:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: var(--kaki-soft); }
 .location:hover::before { transform: scaleY(1); }
 .location h3 {
   font-family: var(--font-display); font-weight: 600;
@@ -316,7 +315,7 @@ section { padding: clamp(3rem, 7vw, 6rem) 0; }
 }
 .location dd { margin: .15rem 0 0; }
 .location dd a { text-decoration: none; border-bottom: 1px solid var(--line); }
-.location dd a:hover { border-color: var(--terracotta); color: var(--terracotta-2); }
+.location dd a:hover { border-color: var(--kaki); color: var(--kaki-2); }
 
 /* praktisch: tarieven */
 .praktisch {
@@ -337,8 +336,7 @@ section { padding: clamp(3rem, 7vw, 6rem) 0; }
   text-align: right; font-family: var(--font-display); font-size: 1.25rem; white-space: nowrap;
 }
 .prices tbody tr { transition: background .3s ease; }
-.prices tbody tr:hover { background: color-mix(in srgb, var(--clay) 40%, transparent); }
-
+.prices tbody tr:hover { background: color-mix(in srgb, var(--kaki-soft) 40%, transparent); }
 .pay { display: flex; gap: .6rem; flex-wrap: wrap; margin: 0 0 1.6rem; padding: 0; list-style: none; }
 .pay li {
   padding: .5rem 1rem; border-radius: 999px;
@@ -350,7 +348,7 @@ section { padding: clamp(3rem, 7vw, 6rem) 0; }
 .site-footer {
   border-top: 1px solid var(--line);
   padding: clamp(2.5rem, 5vw, 4rem) 0 2.5rem;
-  background: color-mix(in srgb, var(--cream-2) 55%, transparent);
+  background: #eeeadb;
 }
 .footer-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -358,8 +356,8 @@ section { padding: clamp(3rem, 7vw, 6rem) 0; }
 }
 .site-footer p { margin: 0 0 .8rem; max-width: 42ch; color: var(--ink-soft); }
 .site-footer .fine { font-size: .85rem; color: var(--ink-soft); }
-.site-footer a { color: var(--terracotta-2); text-decoration: none; border-bottom: 1px solid var(--line); }
-.site-footer a:hover { border-color: var(--terracotta); }
+.site-footer a { color: var(--kaki-2); text-decoration: none; border-bottom: 1px solid var(--line); }
+.site-footer a:hover { border-color: var(--kaki); }
 
 /* ---------------- motion ---------------- */
 
@@ -383,7 +381,7 @@ section { padding: clamp(3rem, 7vw, 6rem) 0; }
 /* ---------------- responsive ---------------- */
 
 @media (max-width: 940px) {
-  .hero .wrap, .about, .praktisch { grid-template-columns: 1fr; }
+  .hero .wrap, .about, .praktisch { grid-template-columns: minmax(0, 1fr); }
   .portrait { justify-self: stretch; order: -1; max-height: 520px; }
   .portrait-frame::before { inset: -12px -12px 24px 24px; }
   .interior { position: static; }
@@ -394,6 +392,16 @@ section { padding: clamp(3rem, 7vw, 6rem) 0; }
 @media (max-width: 620px) {
   .site-header .wrap { flex-wrap: wrap; gap: .8rem; }
   .nav { margin-left: 0; flex-wrap: wrap; }
-  .timeline li { grid-template-columns: 1fr; gap: .2rem; }
-  .prices td:last-child { font-size: 1.1rem; }
+
+  /* prices become stacked rows so nothing overflows narrow screens */
+  .prices thead { display: none; }
+  .prices, .prices tbody, .prices tr, .prices td { display: block; width: 100%; }
+  .prices tr {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+    padding: .85rem 0; border-bottom: 1px solid var(--line);
+  }
+  .prices td { padding: 0; border-bottom: 0; white-space: normal; }
+  .prices td:first-child { flex: 1 1 auto; min-width: 0; }
+  .prices td:last-child { font-size: 1.1rem; flex: 0 1 auto; min-width: 0; text-align: right; white-space: normal; }
+  .note a { overflow-wrap: anywhere; }
 }

@@ -1,0 +1,11 @@
+{
+  "name": "Julie De Kezel — Klinisch psycholoog",
+  "short_name": "Julie De Kezel",
+  "description": "Klinisch psycholoog voor kinderen, jongeren en jongvolwassenen in Brugge en Knokke-Heist.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f3ea",
+  "theme_color": "#7f8d52",
+  "lang": "nl"
+}
